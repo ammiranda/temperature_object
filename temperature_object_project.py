@@ -1,4 +1,4 @@
-class Temperature:
+class Temperature(object):
  def __init__(self, options = {}):
   if "c" in options:
    self.celsius = options["c"]
@@ -7,26 +7,26 @@ class Temperature:
   if "k" in options: 
    self.celsius = options["k"] - 273.15
    
- def in_faharenheit:
+ def in_fahrenheit(self):
   return ((self.celsius * 9.0) / 5) + 32
 
- def in_celsius:
+ def in_celsius(self):
   return self.celsius
  
- def in_kelvin:
+ def in_kelvin(self):
   return self.celsius + 273.15
   
 
 class Celsius(Temperature):
- def __init__(self, celsius):
+ def __init__(self, cel):
   super(Celsius, self).__init__({"c":cel})
   
 class Fahrenheit(Temperature):
- def __init__(self, fahrenheit):
+ def __init__(self, fah):
   super(Fahrenheit, self).__init__({"f":fah})
   
 class Kelvin(Temperature):
- def __init__(self, kelvin):
+ def __init__(self, kel):
   super(Kelvin, self).__init__({"k":kel})
   
   
